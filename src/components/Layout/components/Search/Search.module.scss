@@ -23,6 +23,7 @@
         font-size: 1.6rem;
         background-color: transparent;
         caret-color: var(--primary);
+        font-family: var(--font-family);
     }
 
     input:not(:placeholder-shown) ~ .search-btn {
@@ -69,6 +70,25 @@
 }
 
 .loading {
+    animation: spinner 0.8s linear infinite;
+    -webkit-animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: translateY(-50%) rotate(0);
+        -webkit-transform: translateY(-50%) rotate(0);
+        -moz-transform: translateY(-50%) rotate(0);
+        -ms-transform: translateY(-50%) rotate(0);
+        -o-transform: translateY(-50%) rotate(0);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+        -webkit-transform: translateY(-50%) rotate(360deg);
+        -moz-transform: translateY(-50%) rotate(360deg);
+        -ms-transform: translateY(-50%) rotate(360deg);
+        -o-transform: translateY(-50%) rotate(360deg);
+    }
 }
 
 .search-btn {
